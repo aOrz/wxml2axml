@@ -1,0 +1,25 @@
+{
+  "name": "wxml2axml",
+  "version": "0.0.4",
+  "description": "wxml to axml",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/4013465w/wxml2axml.git"
+  },
+  "keywords": [
+    "wxml",
+    "wxmp",
+    "axml",
+    "amp"
+  ],
+  "author": "rememberwz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/4013465w/wxml2axml/issues"
+  },
+  "homepage": "https://github.com/4013465w/wxml2axml#readme"
+}
