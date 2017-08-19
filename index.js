@@ -9,7 +9,7 @@ function genAst (ast) {
             name: name.replace(/^wx\:/, 'a:').replace(/^bind(.*)/, (rep, $1) => {
                 return `on${$1[0].toUpperCase()}${$1.slice(1)}`;
             }),
-                value
+                value: value.replace(/\.wxml$/i, '.axml')
             };
         })
     }
