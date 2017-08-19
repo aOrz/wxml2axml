@@ -1,7 +1,7 @@
 const parse5 = require('parse5');
 
 function genAst (ast) {
-    let {childNodes, attrs} = ast;
+    let {childNodes, attrs, content = {}} = ast;
     if (attrs) {
         ast.attrs = attrs.map(item => {
             let {name, value} = item;
@@ -16,6 +16,11 @@ function genAst (ast) {
 
     if (childNodes) {
         ast.childNodes = childNodes.map(item => {
+            return genAst(item);
+        })
+    }
+    if (content.childNodes) {
+        ast.content.childNodes = content.childNodes.map(item => {
             return genAst(item);
         })
     }
