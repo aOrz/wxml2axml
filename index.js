@@ -26,10 +26,15 @@ function genAst (ast) {
 function compiler (html) {
     const document = parse5.parseFragment(html);
     genAst(document)
-    console.log(document)
+    // console.log(document)
     
     const axml = parse5.serialize(document);
-    return axml;
+    return unescapeHTML(axml);
+}
+
+function unescapeHTML (a) {
+    a = "" + a;  
+    return a.replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&amp;/g, "&").replace(/&quot;/g, '"').replace(/&apos;/g, "'");  
 }
 
 module.exports = {
