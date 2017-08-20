@@ -1,6 +1,6 @@
 {
   "name": "wxml2axml",
-  "version": "0.0.7",
+  "version": "0.0.9",
   "description": "wxml to axml",
   "main": "index.js",
   "scripts": {
@@ -23,6 +23,6 @@
   },
   "homepage": "https://github.com/4013465w/wxml2axml#readme",
   "dependencies": {
-    "parse5": "^3.0.2"
+    "parse5-wxmp": "^3.0.3"
   }
 }
