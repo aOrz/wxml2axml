@@ -1,15 +1,19 @@
 const parse5 = require('parse5');
 
 function genAst (ast) {
-    let {childNodes, attrs, content = {}} = ast;
+    let {childNodes, attrs, content = {}, tagName} = ast;
     if (attrs) {
         ast.attrs = attrs.map(item => {
             let {name, value} = item;
+            if((tagName === 'include' || tagName === 'import') && name === 'src') {
+                value = value.replace(/\.wxml$/i, '.axml');
+                value = value[0] === '.' ? value : './' + value;
+            }
             return {
             name: name.replace(/^wx\:/, 'a:').replace(/^bind(.*)/, (rep, $1) => {
                 return `on${$1[0].toUpperCase()}${$1.slice(1)}`;
             }),
-                value: value.replace(/\.wxml$/i, '.axml')
+                value
             };
         })
     }
