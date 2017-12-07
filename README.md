@@ -8,7 +8,7 @@
 
 ## 安装
 `npm i wxml2axml`
-### 使用
+## 使用
 ```javascript
 let wxml2axml = require('wxml2axml')
 let str = `<!--index.wxml-->
@@ -26,3 +26,9 @@ let out = wxml2axml.compiler(str);
 
 console.log(out)
 ```
+
+## 分享交流
+
+打赏|加小助手进微信群
+:---:|:---:
+<img src="https://fddcn.cn/wp-content/uploads/2017/12/WechatIMG117.jpeg" width="200"/>  |  <img src="https://fddcn.cn/wp-content/uploads/2017/12/WechatIMG116.jpeg" width="200"/>
