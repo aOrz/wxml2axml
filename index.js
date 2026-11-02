@@ -1,4 +1,4 @@
-const parse5 = require('parse5');
+const parse5 = require('parse5-wxmp');
 
 function genAst (ast) {
     let {childNodes, attrs, content = {}, tagName} = ast;
